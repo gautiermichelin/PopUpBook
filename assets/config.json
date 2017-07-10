@@ -1,0 +1,101 @@
+{
+  "0":{
+    "id": "credits",
+    "title": "Au coeur de la cite plantagenet",
+    "text": "intro.html"
+  },
+  "1":{
+    "id":"pilier-rouge",
+    "title": "Le pilier rouge",
+    "text": "pr.html",
+    "first": {
+      "backgroundURL": "./assets/img/pilier-rouge/pr1.svgz"
+    },
+    "second":{
+      "backgroundURL": "./assets/img/pilier-rouge/pr2.svgz"
+    },
+    "third":{
+      "backgroundURL": "./assets/img/pilier-rouge/pr3.svgz"
+    },
+    "fourth":{
+      "backgroundURL": "./assets/img/pilier-rouge/pr4.svgz"
+    },
+    "fifth":{
+      "backgroundURL": "./assets/img/pilier-rouge/pr5.svgz"
+    },
+    "sixth":{
+      "backgroundURL": "./assets/img/pilier-rouge/pr6.svgz"
+    }
+  },
+  "2": {
+    "id": "maison-des-deux-amis",
+    "title": "La maison des deux amis",
+    "text": "md2a.html",
+    "first": {
+      "backgroundURL": "./assets/img/maison-des-deux-amis/face1.svgz"
+    },
+    "second":{
+      "backgroundURL": "./assets/img/maison-des-deux-amis/face2.svgz"
+    },
+    "third":{
+      "backgroundURL": "./assets/img/maison-des-deux-amis/face3.svgz"
+    },
+    "fourth":{
+      "backgroundURL": "./assets/img/maison-des-deux-amis/face4.svgz"
+    },
+    "fifth":{
+      "backgroundURL": "./assets/img/maison-des-deux-amis/face5.svgz"
+    }
+  },
+  "3":{
+    "id": "pdcdm",
+    "title":"Palais des comtes du Maine",
+    "text": "pdcdm.html",
+    "first": {
+      "backgroundURL": "./assets/img/palais-des-comtes-du-maine/pdcdm1.svgz"
+    },
+    "second":{
+      "backgroundURL": "./assets/img/palais-des-comtes-du-maine/pdcdm2.svgz"
+    },
+    "third":{
+      "backgroundURL": "./assets/img/palais-des-comtes-du-maine/pdcdm3.svgz"
+    },
+    "fourth":{
+      "backgroundURL": "./assets/img/palais-des-comtes-du-maine/pdcdm4.svgz"
+    },
+    "fifth":{
+      "backgroundURL": "./assets/img/palais-des-comtes-du-maine/pdcdm5.svgz"
+    },
+    "sixth":{
+      "backgroundURL": "./assets/img/palais-des-comtes-du-maine/pdcdm6.svgz"
+    }
+  },
+  "4":{
+    "id":"muraille",
+    "title":"L'enceinte gallo-romaine",
+    "text": "egr.html",
+    "first": {
+      "backgroundURL": "./assets/img/muraille-du-mans/mdm1.svgz"
+    },
+    "second":{
+      "backgroundURL": "./assets/img/muraille-du-mans/mdm2.svgz"
+    },
+    "third":{
+      "backgroundURL": "./assets/img/muraille-du-mans/mdm3.svgz"
+    },
+    "fourth":{
+      "backgroundURL": "./assets/img/muraille-du-mans/mdm4.svgz"
+    },
+    "fifth":{
+      "backgroundURL": "./assets/img/muraille-du-mans/mdm5.svgz"
+    },
+    "sixth":{
+      "backgroundURL": "./assets/img/muraille-du-mans/mdm6.svgz"
+    }
+  },
+  "5": {
+    "id": "conclusion",
+    "title": "Conclusion",
+    "text": "conclu.html"
+  }
+}

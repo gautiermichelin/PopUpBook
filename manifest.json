@@ -1,0 +1,15 @@
+{
+  "name": "Au coeur de la cité Plantagenet",
+  "short_name": "Vieux Mans",
+  "description": "Découvrez la cité Plantagenet grâce aux dessins de Lucas Piazza",
+  "icons": [{
+    "src": "./assets/img/logo.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "theme_color":"#285065",
+  "background_color": "#39718e",
+  "orientation": "landscape",
+  "display": "fullscreen",
+  "start_url": "index.html?launcher=true"
+}

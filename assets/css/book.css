@@ -1,0 +1,716 @@
+@charset "UTF-8";
+
+/*
+ Taken from Code from beercamp 2012 - http://2012.beercamp.nclud.com
+*/
+
+/* CSS Document */
+/****************************
+
+	Fonts
+
+****************************/
+@font-face {
+    font-family: 'Curse Casual';
+    src: url('../fonts/curse-casual.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/****************************
+
+	Main
+
+****************************/
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	background: url(../img/divers/burst.svg) center center rgba(83, 175, 225, 0.95);
+	background: url(../img/divers/burst.svg) center center, -webkit-radial-gradient(center, closest-side, rgba(0, 0, 0, 0), rgba(0, 0, 0, .6)) rgba(83, 175, 225, 0.95);
+	background: url(../img/divers/burst.svg) center center, -moz-radial-gradient(center, closest-side, rgba(0, 0, 0, 0), rgba(0, 0, 0, .6)) rgba(83, 175, 225, 0.95);
+	background-size: cover, 100% 100%;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+	-webkit-user-select: none;
+	-moz-user-select: -moz-none;
+	user-select: none;
+}
+
+/****************************
+
+	Scene
+
+****************************/
+.scene {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: translateY(100px) rotateX(-15deg) rotateY(0deg);
+	-moz-transform: translateY(100px) rotateX(-15deg) rotateY(0deg);
+	transform: translateY(100px) rotateX(-15deg) rotateY(0deg);
+	-moz-user-select: -moz-none;
+}
+
+/****************************
+
+	Book
+
+****************************/
+
+.book {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1200px;
+	height: 600px;
+	margin-top: -300px;
+	-webkit-transform: rotateX(90deg);
+	-moz-transform: rotateX(90deg);
+	transform: rotateX(90deg);
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: -300px 300px;
+	-moz-transform-origin: -300px 300px;
+	transform-origin: -300px 300px;
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
+	cursor: grab;
+}
+
+.book.on-cover {
+	-webkit-transform: translateX(-300px) rotateX(29deg) rotateZ(-8deg) translateZ(100px);
+	-moz-transform: translateX(-300px) rotateX(29deg) rotateZ(-8deg) translateZ(100px);
+	transform: translateX(-300px) rotateX(29deg) rotateZ(-8deg) translateZ(100px);
+}
+
+.spreads {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.spread {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: left bottom;
+	-moz-transform-origin: left bottom;
+	transform-origin: left bottom;
+}
+
+.page-left {
+	position: absolute;
+	left: -600px;
+	width: 600px;
+	height: 600px;
+	border-radius: 20px 0 0 20px;
+	-webkit-transform-origin: bottom right;
+	-moz-transform-origin: bottom right;
+	transform-origin: bottom right;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.page-right {
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	border-radius: 0 20px 20px 0;
+	-webkit-transform-origin: bottom left;
+	-moz-transform-origin: bottom left;
+	transform-origin: bottom left;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.page-left:before {
+	border-radius: 20px 0 0 20px;
+}
+
+.page-right:before {
+	border-radius: 0 20px 20px 0;
+}
+
+.hotspot {
+	background-color: #285065;
+	display: none;
+	cursor: pointer;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: scale3d(.5, .5, .5) translateZ(5px);
+	-moz-transform: scale3d(.5, .5, .5) translateZ(5px);
+	transform: scale3d(.5, .5, .5) translateZ(5px);
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+}
+
+.hotspot .indicator {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100px;
+	height: 100px;
+	font-size: 50px;
+	line-height: 90px;
+	background: url(../img/book-global/hotspot-indicator-x.svg) no-repeat, url(../img/book-global/hotspot-indicator-arrow.svg) no-repeat;
+	background-position: 0 0, 0 0;
+	-webkit-transform: rotateX(-90deg) translateY(-60px);
+	-moz-transform: rotateX(-90deg) translateY(-60px);
+	transform: rotateX(-90deg) translateY(-60px);
+	-webkit-transition: all .75s .25s;
+	-moz-transition: all .75s .25s;
+	transition: all .75s .25s;
+	-webkit-animation: bob 2s infinite ease-in-out;
+	-moz-animation: bob 2s infinite ease-in-out;
+	animation: bob 2s infinite ease-in-out;
+}
+
+.hotspot.focused .indicator {
+	-webkit-animation: none;
+	-moz-animation: none;
+	animation: none;
+	-webkit-transform: rotateX(-90deg) translateY(-60px) rotateX(90deg) rotateZ(45deg);
+	-moz-transform: rotateX(-90deg) translateY(-60px) rotateX(90deg) rotateZ(45deg);
+	transform: rotateX(-90deg) translateY(-60px) rotateX(90deg) rotateZ(45deg);
+	background-position: 0 0, 0 -30px;
+}
+
+.hotspot p {
+	font-family: "Curse Casual";
+	text-align: justify;
+}
+
+.hotspot:hover {
+	background-color: #39718e;
+}
+
+@-webkit-keyframes bob {
+	0% {
+		-webkit-transform: rotateX(-90deg) translateY(-60px);
+	}
+	50% {
+		-webkit-transform: rotateX(-90deg) translateY(-70px);
+	}
+	100% {
+		-webkit-transform: rotateX(-90deg) translateY(-60px);
+	}
+}
+
+@-moz-keyframes bob {
+	0% {
+		-moz-transform: rotateX(-90deg) translateY(-60px);
+	}
+	50% {
+		-moz-transform: rotateX(-90deg) translateY(-70px);
+	}
+	100% {
+		-moz-transform: rotateX(-90deg) translateY(-60px);
+	}
+}
+.cover .page-right {
+	background: url(../img/book-global/cover.svgz) no-repeat 0 0 rgba(255, 255, 255, 0.5);
+	-moz-transform-style: flat;
+}
+
+.back .page-left {
+	background: url(../img/book-global/back.svgz) no-repeat 0 0  #98D8EF;
+	-moz-transform-style: flat;
+}
+
+.page{
+	background: #EEE url(../img/book-global/pave.svg) bottom left no-repeat;
+}
+
+.noise{
+	background: #98D8EF;
+	background-image: url(data:image/png;base64,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);
+}
+
+.drag-notice {
+	position: absolute;
+	top: 50%;
+	left: 465px;
+	width: 200px;
+	padding-left: 35px;
+	font-family: 'Curse Casual';
+	background: url(../img/divers/arrow.svg) no-repeat left 4px;
+	font-size: 30px;
+	-webkit-transform: translateZ(50px);
+	-moz-transform: translateZ(50px);
+	transform: translateZ(50px);
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+	opacity: 0;
+	color: #D95555;
+}
+
+
+/****************************
+
+	Popups
+
+****************************/
+
+.popup {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 600px;
+	height: 500px;
+	margin-top: -500px;
+	background-repeat: no-repeat;
+	-webkit-transform-origin: bottom center;
+	-moz-transform-origin: bottom center;
+	transform-origin: bottom center;
+}
+
+.popup:hover {
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+}
+
+.page-left .popup {
+	background-position: 0px 0px;
+	-webkit-transform-origin: bottom right;
+	-moz-transform-origin: bottom right;
+	transform-origin: bottom right;
+	-webkit-transform: rotateZ(15deg);
+	-moz-transform: rotateZ(15deg);
+	transform: rotateZ(15deg);
+}
+
+.page-right .popup {
+	background-position: 600px 0px;
+	-webkit-transform-origin: bottom left;
+	-moz-transform-origin: bottom left;
+	transform-origin: bottom left;
+	-webkit-transform: rotateZ(-15deg);
+	-moz-transform: rotateZ(-15deg);
+	transform: rotateZ(-15deg);
+}
+
+/*********************
+ All pages
+ *********************/
+
+
+/*** Pilier-rouge ***/
+
+.pilier-rouge-wrapper .page-left .popup {
+	background-position: 0px 0px;
+}
+
+.pilier-rouge-wrapper .page-right .popup {
+	background-position: 532px 0px;
+}
+
+.pilier-rouge-wrapper .hotspot {
+	position: absolute;
+	padding:32px;
+	font-size: 32px;
+	line-height: 32px;
+	border-radius: 20px;
+	bottom: 32px;
+	right: 32px;
+	color: #fff;
+	-webkit-transform-origin: right bottom;
+	-moz-transform-origin: right bottom;
+	transform-origin: right bottom;
+}
+
+.pilier-rouge-titre {
+	background: url(../img/pilier-rouge/pr1.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.bourreau {
+	background: url(../img/pilier-rouge/pr2.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.medecin {
+	background: url(../img/pilier-rouge/pr3.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.lampadaire {
+	background: url(../img/pilier-rouge/pr4.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+
+}
+
+.vieilles-maisons {
+	background: url(../img/pilier-rouge/pr5.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.vieilles-maisons-grises-1 {
+	background: url(../img/pilier-rouge/pr7.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.vieilles-maisons-grises-2 {
+	background: url(../img/pilier-rouge/pr6.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.drag-notice.shown {
+	opacity: 1;
+}
+
+.warning {
+	display: none;
+}
+
+/******************************
+Maison des deux amis
+******************************/
+
+.maison-des-deux-amis-wrapper .hotspot {
+	position: absolute;
+	padding:32px;
+	font-size: 32px;
+	line-height: 32px;
+	border-radius: 20px;
+	bottom: 32px;
+	right: 32px;
+	color: #fff;
+	-webkit-transform-origin: right bottom;
+	-moz-transform-origin: right bottom;
+	transform-origin: right bottom;
+}
+
+.maison-des-deux-amis-wrapper .page-left .popup {
+	background-position: 0px 0px;
+}
+
+.maison-des-deux-amis-wrapper .page-right .popup {
+	background-position: 557px 0px;
+}
+
+
+.maison-des-deux-amis-titre {
+	background: url(../img/maison-des-deux-amis/face1.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.poete {
+	background: url(../img/maison-des-deux-amis/face2.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.marchand {
+	background: url(../img/maison-des-deux-amis/face3.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.tonneau {
+	background: url(../img/maison-des-deux-amis/face4.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.maison-des-deux-amis {
+	background: url(../img/maison-des-deux-amis/face5.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+
+.maisons-grises-1 {
+	background: url(../img/maison-des-deux-amis/face6.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.maisons-grises-2 {
+	background: url(../img/maison-des-deux-amis/face7.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+/******************************
+Palais des comtes du Maine
+*********************************/
+
+.palais-des-comtes-du-maine-wrapper .page-left .popup{
+	background-position: 74px 0px;
+}
+
+.palais-des-comtes-du-maine-wrapper .page-right .popup{
+	background-position: 572px 0px;
+}
+
+.palais-des-comtes-du-maine-wrapper .hotspot {
+	position: absolute;
+	padding:32px;
+	font-size: 32px;
+	line-height: 32px;
+	border-radius: 20px;
+	bottom: 32px;
+	right: 32px;
+	color: #fff;
+	-webkit-transform-origin: right bottom;
+	-moz-transform-origin: right bottom;
+	transform-origin: right bottom;
+}
+
+.palais-des-comtes-du-maine-titre-1{
+	background: url(../img/palais-des-comtes-du-maine/pdcdm1.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.mathilde {
+	background: url(../img/palais-des-comtes-du-maine/pdcdm2.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.geoffroy {
+	background: url(../img/palais-des-comtes-du-maine/pdcdm3.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.henry-II {
+	background: url(../img/palais-des-comtes-du-maine/pdcdm4.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.palais-des-comtes-du-maine {
+	background: url(../img/palais-des-comtes-du-maine/pdcdm5.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.palais-des-comtes-du-maine-gris {
+	background: url(../img/palais-des-comtes-du-maine/pdcdm6.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.palais-des-comtes-du-maine-gris-2 {
+	background: url(../img/palais-des-comtes-du-maine/pdcdm7.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+/**
+ La muraille du mans
+ */
+.muraille-du-mans-wrapper .page-left .popup{
+	background-position: 150px 0px;
+}
+
+.muraille-du-mans-wrapper .page-right .popup{
+	background-position: 602px 0px;
+}
+
+.muraille-du-mans-wrapper .hotspot {
+	position: absolute;
+	padding:32px;
+	font-size: 32px;
+	line-height: 32px;
+	border-radius: 20px;
+	bottom: 32px;
+	right: 32px;
+	color: #fff;
+	-webkit-transform-origin: right bottom;
+	-moz-transform-origin: right bottom;
+	transform-origin: right bottom;
+}
+
+.muraille-du-mans-titre {
+	background: url(../img/muraille-du-mans/mdm1.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.artisan-1 {
+	background: url(../img/muraille-du-mans/mdm2.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.artisan-2 {
+	background: url(../img/muraille-du-mans/mdm3.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.aurelien{
+	background: url(../img/muraille-du-mans/mdm4.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.muraille {
+	background: url(../img/muraille-du-mans/mdm5.svgz);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+.page-left .muraille {
+	background: url(../img/muraille-du-mans/mdm5.svgz) no-repeat no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+}
+
+
+/*****************************
+	Filter gray
+ ****************************/
+
+.vpart {
+	float: left;
+	width: 25%;
+	height: 100%;
+}
+
+.hpart {
+	width: 100%;
+	height: 25%;
+}
+
+
+/***********
+ * Tooltip
+ ***********/
+.ui-tooltip {
+	text-align: center;
+	border-radius: 8px;
+	font-family: "Curse Casual";
+	width: 128px;
+	padding: 8px;
+	background-color: white;
+	color: #39718e;
+}
+
+/* Don't display log*/
+.ui-helper-hidden-accessible {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/****************************
+	No 3d
+****************************/
+
+.no3d .scene {
+	width: 100%;
+	height: 600px;
+	-webkit-transform: none;
+	-moz-transform: none;
+	transform: none;
+}
+
+.no3d .book {
+	display: none;
+}
+
+.no3d footer {
+	position: absolute;
+	top: 600px;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	min-width: 940px;
+	background: #000;
+}
+
+.no3d .warning {
+	display: block;
+	height: 40px;
+	background: #fff;
+	color: #000;
+	line-height: 38px;
+	text-align: center;
+}
+
+.no3d .beercamp-title {
+	margin: 20px 0 6px 0;
+}
+
+/****************************
+
+	Debug
+
+****************************/
+
+.debug {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 350px;
+	height: 100%;
+	font: 12px Helvetica;
+	color: #fff;
+	overflow: scroll;
+}

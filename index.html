@@ -1,0 +1,64 @@
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, maximum-scale=6" />
+        <meta name="theme-color" content="#285065">
+        <title>Au coeur de la cite Plantagenet | Lucas Piazza</title>
+
+        <link rel="manifest"   href="./manifest.json">
+        <link rel="stylesheet" href="./assets/css/base.css" media="screen">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" media="screen" defer>
+    </head>
+    <body>
+        <header>
+            <div class="warning"></div>
+            <div class="details">
+                <div class="details__img">
+                    <div class="logo"></div>
+                </div>
+                <div class="details__description">
+                    <h1 class="details__description__h1">Au coeur de la cité Plantagenêt</h1>
+                    <a class="details__description__a"> Textes & Dessin par Lucas Piazza</a>
+                </div>
+            </div>
+        </header>
+        <iframe id="livre" src="book.html" title="livre"></iframe>
+        <div class="wrapper">
+            <div class="container text-center arrow-down" id="detail">
+                <a onClick="toggleLivre();">
+                    <img src="assets/img/divers/arrow-down.png" alt="Afficher le reste de la page">
+                </a>
+            </div>
+            <div class="container text-center arrow-up">
+                <a onClick="toggleLivre();">
+                    <img src="assets/img/divers/arrow-up.png" alt="Revenir au livre">
+                </a>
+            </div>
+            <div class="wrapper-animation">
+                <div class="animation">
+                    <div id="environment">
+                        <div id="content">
+                            <section id="first"></section>
+                            <section id="second"></section>
+                            <section id="third"></section>
+                            <section id="fourth"></section>
+                            <section id="fifth"></section>
+                            <section id="sixth"></section>
+                        </div>
+                    </div>
+                </div>
+                <div class="animation-text">
+                    <div class="bg-article">
+                        <div class="article"></div>
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+         </div>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" defer></script>
+        <script type="text/javascript" src="assets/js/base.js" defer></script>
+        <script type="text/javascript" src="assets/js/animation.js" defer></script>
+    </body>
+</html>

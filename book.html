@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!--
+ Code from beercamp 2012 - http://2012.beercamp.nclud.com
+ -->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, maximum-scale=6" />
+        <title>Au coeur de la cite Plantagenet</title>
+        <link type="text/css" rel="stylesheet" href="assets/css/reset.css" media="screen"/>
+        <link type="text/css" rel="stylesheet" href="assets/css/book.css" media="screen"/>
+    </head>
+    <body>
+        <div id="book">
+            <div class="scene">
+                <div class="book on-cover">
+                    <div class="drag-notice shown">Cliquez-glissez<br/> pour tourner les pages !</div>
+                    <ul class="spreads">
+                        <li class="cover spread">
+                            <div class="page-right page"></div>
+                        </li>
+                        <li class="pilier-rouge-wrapper spread">
+                            <div class="page-left page">
+                                <div class="vieilles-maisons-grises-1 popup" data-depth="150"></div>
+                                <div class="vieilles-maisons-grises-2 popup" data-depth="200"></div>
+                                <div class="vieilles-maisons popup" data-depth="250" data-title="Le pilier rouge"></div>
+                                <div class="lampadaire popup" data-depth="300"></div>
+                                <div class="bourreau popup" data-depth="500" data-title="Le bourreau"></div>
+                                <div class="pilier-rouge-titre popup" data-depth="550"></div>
+                                <div class="popup" data-depth="551">
+                                    <div class="vpart">
+                                        <div class="hpart" data-behind=""></div>
+                                        <div class="hpart" data-behind=""></div>
+                                        <div class="hpart" data-behind=""></div>
+                                        <div class="hpart" data-behind=""></div>
+                                    </div>
+                                    <div class="vpart">
+                                        <span class="qqch" data-behind="vieilles-maisons">
+                                            <div class="hpart" data-behind="vieilles-maisons"></div>
+                                        </span>
+                                        <span class="qqch" data-behind="bourreau">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+                                    </div>
+                                    <div class="vpart">
+                                        <span class="qqch" data-behind="vieilles-maisons">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+                                        <div class="hpart" data-behind="pilier-rouge-titre"></div>
+                                    </div>
+                                    <div class="vpart">
+                                        <span class="qqch" data-behind="vieilles-maisons">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+                                        <div class="hpart" data-behind="pilier-rouge-titre"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-right page">
+                                <div class="hotspot">
+                                    <div class="indicator" data-offsetX="50" data-offsetY="50"></div>
+                                    <p>
+                                        Construite au XVème siècle et faisant office d’enseigne à cette époque, la maison du pilier rouge, classé monument historique,
+                                        est aujourd’hui le siège du service tourisme et patrimoine de la ville.
+                                    </p>
+                                </div>
+                                <div class="vieilles-maisons popup" data-depth="250"  data-title="Le pilier rouge"></div>
+                                <div class="medecin popup" data-depth="500" data-title="Le médecin"></div>
+                                <div class="popup" data-depth="551">
+                                    <div class="vpart">
+                                        <span class="qqch" data-behind="vieilles-maisons">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+                                    </div>
+                                    <div class="vpart">
+                                        <div class="hpart"></div>
+                                        <span class="qqch" data-behind="medecin">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+                                    </div>
+                                    <div class="vpart">
+                                        <div class="hpart" data-behind="vieilles-maisons"></div>
+                                        <span class="qqch" data-behind="medecin">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+                                    </div>
+                                    <div class="vpart">
+                                        <div class="hpart"></div>
+                                        <div class="hpart"></div>
+                                        <div class="hpart"></div>
+                                        <div class="hpart"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="maison-des-deux-amis-wrapper spread">
+                            <div class="page-left page">
+                                <div class="maisons-grises-2 popup" data-depth="150"></div>
+                                <div class="maisons-grises-1 popup" data-depth="200"></div>
+                                <div class="maison-des-deux-amis popup" data-depth="250" data-title="La maison des deux amis"></div>
+                                <div class="poete popup" data-depth="400" data-title="Le poète"></div>
+                                <div class="maison-des-deux-amis-titre popup" data-depth="550"></div>
+                                <div class="popup" data-depth="551">
+                                    <div class="vpart">
+                                        <div class="hpart" data-behind=""></div>
+                                        <div class="hpart" data-behind=""></div>
+                                        <div class="hpart" data-behind=""></div>
+                                        <div class="hpart" data-behind=""></div>
+                                    </div>
+                                    <div class="vpart">
+                                        <div class="hpart" data-behind=""></div>
+                                        <a class="qqch" data-behind="poete">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </a>
+                                    </div>
+                                    <div class="vpart">
+                                        <div class="hpart" data-behind=""></div>
+                                        <span class="qqch" data-behind="poete">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+                                        <div class="hpart" data-behind="maison-des-deux-amis-titre "></div>
+                                    </div>
+                                    <div class="vpart">
+                                        <span class="qqch" data-behind="maison-des-deux-amis">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+                                        <div class="hpart" data-behind="maison-des-deux-amis-titre"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-right page">
+                                <div class="hotspot">
+                                    <div class="indicator" data-offsetX="50" data-offsetY="50"></div>
+                                        <p>
+                                            Construite au début du XVIème siècle, cette maison doit son nom à la sculpture centrale représentant deux hommes
+                                            se tenant la main regardant la porte d’entrée. Le mystère sur l’identité de ceux-ci reste cependant entier.<br/>
+                                        </p>
+                                    </div>
+                                    <div class="maisons-grises-2 popup" data-depth="150"></div>
+                                    <div class="maisons-grises-1 popup" data-depth="200"></div>
+                                    <div class="maison-des-deux-amis popup" data-depth="250"  data-title="La maison des Deux Amis"></div>
+                                    <div class="tonneau popup" data-depth="450"></div>
+                                    <div class="marchand popup" data-depth="500" data-title="Le Marchand"></div>
+                                    <div class="popup" data-depth="551">
+                                        <div class="vpart">
+                                            <span class="qqch" data-behind="maison-des-deux-amis">
+                                                <div class="hpart"></div>
+                                                <div class="hpart"></div>
+                                                <div class="hpart"></div>
+                                                <div class="hpart"></div>
+                                            </span>
+                                        </div>
+                                        <div class="vpart">
+                                            <div class="hpart"></div>
+                                            <span class="qqch" data-behind="marchand">
+                                                <div class="hpart"></div>
+                                                <div class="hpart"></div>
+                                                <div class="hpart"></div>
+                                            </span>
+                                        </div>
+                                        <div class="vpart">
+                                            <div class="hpart"></div>
+                                            <span class="qqch" data-behind="marchand">
+                                                <div class="hpart"></div>
+                                                <div class="hpart"></div>
+                                                <div class="hpart"></div>
+                                            </span>
+                                        </div>
+                                        <div class="vpart">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </li>
+                        <li class="palais-des-comtes-du-maine-wrapper spread">
+                            <div class="page-left page">
+                                <div class="palais-des-comtes-du-maine-gris popup" data-depth="150"></div>
+                                <div class="palais-des-comtes-du-maine popup" data-depth="250" data-title="Palais des comtes du Maine"></div>
+                                <div class="henry-II popup" data-depth="400" data-title="Henry II"></div>
+                                <div class="palais-des-comtes-du-maine-titre-1 popup" data-depth="550"></div>
+                                <div class="popup" data-depth="551">
+                                    <div class="vpart">
+                                        <div class="hpart"></div>
+                                        <div class="hpart"></div>
+                                        <div class="hpart"></div>
+                                        <div class="hpart"></div>
+                                    </div>
+                                    <div class="vpart">
+                                        <div class="hpart" data-behind=""></div>
+                                        <span class="qqch" data-behind="henry-II" >
+                                            <div class="hpart" ></div>
+                                            <div class="hpart" ></div>
+                                            <div class="hpart" ></div>
+                                        </span>
+                                    </div>
+                                    <div class="vpart">
+                                        <div class="hpart" data-behind=""></div>
+                                        <span class="qqch" data-behind="henry-II">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+                                        <div class="hpart" data-behind="palais-des-comtes-du-maine-titre-1"></div>
+                                    </div>
+                                    <div class="vpart">
+                                        <span class="qqch" data-behind="palais-des-comtes-du-maine">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-right page">
+                                <div class="hotspot">
+                                    <div class="indicator" data-offsetX="-50" data-offsetY="50"></div>
+                                    <p>
+                                        Bâti par Hugues 1er au XIIème siècle et classé monument historique,
+                                        ce palais habrita la dynastie des Plantagenêts au cours de leur règne
+                                        sur une partie de l’Angleterre et de la France.<br/>
+                                    </p>
+                                </div>
+                                <div class="palais-des-comtes-du-maine-gris popup" data-depth="150"></div>
+                                <div class="palais-des-comtes-du-maine-gris-2 popup" data-depth="200"></div>
+                                <div class="palais-des-comtes-du-maine popup" data-depth="250" data-title="Le Palais des comtes du Maine"></div>
+                                <div class="geoffroy popup" data-depth="450" data-title="Geoffroy Plantagenêt"></div>
+                                <div class="mathilde popup" data-depth="500" data-title="Mathilde L'Empresse"></div>
+                                <div class="popup" data-depth="551">
+                                    <div class="vpart">
+                                        <span class="qqch" data-behind="palais-des-comtes-du-maine" >
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+                                    </div>
+                                    <div class="vpart">
+                                        <div class="hpart" data-behind=""></div>
+                                        <span class="qqch" data-behind="mathilde" >
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+                                    </div>
+                                    <div class="vpart">
+                                        <div class="hpart" data-behind=""></div>
+                                        <span class="qqch" data-behind="geoffroy">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+                                        <div class="hpart" ></div>
+                                    </div>
+                                    <div class="vpart">
+                                        <div class="hpart" data-behind=""></div>
+                                        <div class="hpart" data-behind=""></div>
+                                        <div class="hpart" data-behind=""></div>
+                                        <div class="hpart" data-behind=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="muraille-du-mans-wrapper spread">
+                            <div class="page-left page">
+                                <div class="muraille popup" data-depth="200"  data-title="L'enceinte gallo-romaine"></div>
+                                <div class="artisan-2 popup" data-depth="400" data-title="Artisans"></div>
+                                <div class="artisan-1 popup" data-depth="500" data-title="Artisans"></div>
+                                <div class="popup" data-depth="551">
+                                    <div class="vpart">
+                                        <span class="qqch" data-behind="muraille">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+
+                                    </div>
+                                    <div class="vpart">
+                                        <div class="hpart" data-behind="muraille"></div>
+                                        <div class="hpart" data-behind=""></div>
+                                        <div class="hpart" data-behind=""></div>
+                                        <div class="hpart" data-behind=""></div>
+                                    </div>
+                                    <div class="vpart">
+                                        <div class="hpart" data-behind="muraille"></div>
+                                        <span class="qqch" data-behind="artisan-1">
+                                            <div class="hpart" ></div>
+                                            <div class="hpart" ></div>
+                                            <div class="hpart" ></div>
+                                        </span>
+                                    </div>
+                                    <div class="vpart">
+                                        <span class="qqch" data-behind="muraille">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+
+                                        <div class="hpart" data-behind="artisan-1"></div>
+                                        <span class="qqch" data-behind="muraille">
+                                            <div class="hpart"></div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-right page">
+                                <div class="hotspot">
+                                    <div class="indicator" data-offsetX="-50" data-offsetY="50"></div>
+                                    <p>
+                                        Dans un vaste projet de consolidation de l’empire romain face aux barbares par l’empereur
+                                        Aurélien durant le IIIème siècle, la muraille <br/>
+                                    </p>
+                                </div>
+                                <div class="muraille popup" data-depth="200" data-title="L'enceinte gallo-romaine"></div>
+                                <div class="aurelien popup" data-depth="500" data-title="Aurelien"></div>
+                                <div class="muraille-du-mans-titre popup" data-depth="550"></div>
+
+                                <div class="popup" data-depth="551">
+                                    <div class="vpart">
+                                        <span class="qqch" data-behind="muraille">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+                                    </div>
+                                    <div class="vpart">
+                                        <span class="qqch" data-behind="muraille">
+                                            <div class="hpart"></div>
+                                        </span>
+                                        <span class="qqch" data-behind="aurelien">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+                                        <div class="hpart" data-behind="muraille-du-mans-titre"></div>
+                                    </div>
+                                    <div class="vpart">
+                                        <span class="qqch" data-behind="muraille">
+                                            <div class="hpart"></div>
+                                        </span>
+                                        <span class="qqch" data-behind="aurelien">
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                            <div class="hpart"></div>
+                                        </span>
+                                    </div>
+                                    <div class="vpart">
+                                        <div class="hpart" data-behind=""></div>
+                                        <div class="hpart" data-behind=""></div>
+                                        <div class="hpart" data-behind=""></div>
+                                        <div class="hpart" data-behind=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="spread">
+                            <div class="back">
+                                <div class="page-left noise"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" defer></script>
+        <script type="text/javascript" src="assets/js/lib/sylvester.js" defer></script>
+        <script type="text/javascript" src="assets/js/lib/modernizr.js" defer></script>
+        <script type="text/javascript" src="assets/js/book.js" defer></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="  crossorigin="anonymous" defer></script>
+    </body>
+</html>

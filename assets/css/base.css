@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,600,600i,800,800i');
+
+@font-face {
+    font-family: 'Curse Casual';
+    src: url('../fonts/curse-casual.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, body > div {
+    margin:0;
+    padding:0;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+.logo {
+    width: 96px;
+    height: 96px;
+    background: url(../img/logo.svg) no-repeat no-repeat;
+}
+
+.logo-black {
+    width: 96px;
+    height: 96px;
+    background: url(../img/logo-black.svg) no-repeat no-repeat;
+}
+
+iframe {
+    border: none;
+}
+
+#livre {
+    width: 100%;
+    height:100%;
+}
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background: linear-gradient(#245066, #245066,rgba(83, 198, 255, 0.95), #ffffff);
+}
+
+
+.wrapper-animation {
+    height:100%;
+    width:100%;
+}
+
+.animation {
+    position: absolute;
+    margin-top: -10%;
+}
+
+.animation-text {
+    position: relative;
+}
+
+
+.bg-article{
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(240, 240, 240, 0.6), rgba(240, 240, 240, 0.9), rgba(240, 240, 240, 1));
+}
+
+.article {
+    margin: 25% 21% 5% 21%;
+    background-color: rgba(255, 255, 255, 0.90);
+}
+
+.text {
+    text-align: justify;
+    line-height: 32px;
+    font-size: 16px;
+    padding: 64px;
+}
+
+p::first-letter{
+    color: #D85555;
+    font-family: "Curse Casual";
+    font-size: 48px;
+    margin-bottom: -6px;
+    margin-right: 2px;
+}
+
+
+h1, h2, h3 {
+    font-family: "Curse Casual" !important;
+}
+
+p, div {
+    font-family: 'Open Sans';
+    font-weight: 300;
+}
+
+.row {
+    margin: 40px 0px;
+}
+
+.row img {
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.titre{
+    background-size: cover;
+    margin-bottom: 24px ;
+    padding-top: 48px;
+    padding-bottom: 14px;
+    width: 100%;
+    display: block;
+    background-color: rgba(240, 240, 240, 0.95);
+    color: white;
+}
+
+.titre > h1{
+    font-family: "Curse Casual";
+    padding: 16px;
+    background-color: rgba(240, 240, 240, 0.95);
+    font-size: 72px;
+    color: #D85555;
+}
+
+header {
+    font-family: "Curse Casual";
+    background-color: transparent;
+    position: fixed;
+    height: 196px;
+    width: 100%;
+}
+
+/*.social{*/
+   /*padding: 32px;*/
+/*}*/
+
+.details {
+    color: #fff;
+    padding: 32px;
+    width: 512px;
+}
+
+.details__img{
+    float: left;
+    padding: 0px 16px;
+}
+
+.details__description__h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.details__description__a {
+    color: white;
+    font-size: 16px;
+}
+
+.details__description__a:hover {
+    color: white;
+    font-size: 16px;
+}
+
+.arrow-down {
+    position: relative;
+    z-index: 1000;
+    margin-top: -5%;
+}
+
+.arrow-up {
+    position: relative;
+    z-index: 1000;
+    margin-top: 5%;
+}
+
+.credit__img {
+    text-align: center;
+}
+
+.auteur {
+    width: 96px;
+    height: 96px;
+    background: url(../img/lukape.svg) no-repeat no-repeat;
+}
+
+/*
+ * Animation
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+#content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/********************
+* MAGIC ANIMATION
+********************/
+
+#content section {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: 100%;
+    background-color: transparent;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+#environment {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    -ms-perspective: 600px;
+    -o-perspective: 600px;
+    perspective: 600px;
+}
+
+#content {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+
+#first {
+    -webkit-transform: translate3d( 0, 0, -24000px) scale(16);
+    -moz-transform: translate3d( 0, 0, -24000px) scale(16);
+    -ms-transform: translate3d( 0, 0, -24000px) scale(16);
+    -o-transform: translate3d( 0, 0, -24000px) scale(16);
+    transform: translate3d( 0, 0, -24000px) scale(16);
+}
+
+#second {
+    -webkit-transform: translate3d( 0, 0, -24000px ) scale(16);
+    -moz-transform: translate3d( 0, 0, -24000px ) scale(16);
+    -ms-transform: translate3d( 0, 0, -24000px ) scale(16);
+    -o-transform: translate3d( 0, 0, -24000px ) scale(16);
+    transform: translate3d( 0, 0, -24000px ) scale(16);
+}
+
+#third {
+    -webkit-transform: translate3d( 0, 0, -32000px ) scale(32);
+    -moz-transform: translate3d( 0, 0, -32000px ) scale(32);
+    -ms-transform: translate3d( 0, 0, -32000px ) scale(32);
+    -o-transform: translate3d( 0, 0, -32000px ) scale(32);
+    transform: translate3d( 0, 0, -32000px ) scale(32);
+}
+
+#fourth {
+    -webkit-transform: translate3d( 0, 0, -48000px ) scale(48);
+    -moz-transform: translate3d( 0, 0, -48000px ) scale(48);
+    -ms-transform: translate3d( 0, 0, -48000px ) scale(48);
+    -o-transform: translate3d( 0, 0, -48000px ) scale(48);
+    transform: translate3d( 0, 0, -48000px ) scale(48);
+}
+
+#fifth {
+    -webkit-transform: translate3d( 0, 0, -64000px ) scale(64);
+    -moz-transform: translate3d( 0, 0, -64000px ) scale(64);
+    -ms-transform: translate3d( 0, 0, -64000px ) scale(64);
+    -o-transform: translate3d( 0, 0, -64000px ) scale(64);
+    transform: translate3d( 0, 0, -64000px ) scale(64);
+}
+
+
+#sixth {
+    -webkit-transform: translate3d( 0, 0, -80000px ) scale(80);
+    -moz-transform: translate3d( 0, 0, -80000px ) scale(80);
+    -ms-transform: translate3d( 0, 0, -80000px ) scale(80);
+    -o-transform: translate3d( 0, 0, -80000px ) scale(80);
+    transform: translate3d( 0, 0, -80000px ) scale(80);
+}
+
