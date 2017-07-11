@@ -1,4 +1,4 @@
-var hasTouch            = Modernizr.touch,
+var hasTouch              = Modernizr.touch,
 	hasMotion             = Modernizr.devicemotion,
 	hasOrientation        = Modernizr.deviceorientation,
 	has3d                 = Modernizr.csstransforms3d,
@@ -105,10 +105,9 @@ function startDrag(e) {
 	e.preventDefault();
 	$book.css('cursor', '-webkit-grabbing');
 	var data = {
-		offset: hasTouch ? e.originalEvent.touches[0].pageX : e.pageX,
+		offset: hasTouch ? e.originalEvent.targetTouches[0].pageX : e.pageX,
 		width: $body.width()
 	};
-
 	$body.bind(dragMoveEvent, data, updateDrag);
 	$body.bind(dragStopEvent, stopDrag);
 }
@@ -119,7 +118,7 @@ function updateDrag(e) {
     var rightTransform;
 	var offset      = e.data.offset;
 	var width       = e.data.width;
-	var targetX     = hasTouch ? e.originalEvent.touches[0].pageX : e.pageX - offset;
+	var targetX     = hasTouch ? e.originalEvent.targetTouches[0].pageX - offset : e.pageX - offset;
 	var per         = clamp(targetX / width * 2.5, -1, 1);
 	var shouldBreak = false;
 	var dir         = per < 0 ? 'left' : 'right';
